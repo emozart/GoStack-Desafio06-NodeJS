@@ -47,9 +47,7 @@ class CreateTransactionService {
       title,
       value,
       type,
-      category_id: categoryExists.id,
-      created_at: Date.now(),
-      updated_at: Date.now(),
+      category: categoryExists,
     });
 
     await transactionRepository.save(transaction);
